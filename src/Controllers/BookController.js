@@ -23,7 +23,11 @@ class BookController{
     async create(req, res){
         try{
             const livro = {
-                name:"matheus"
+                author:"matheus",
+                name:"mathes",
+                title:"matheus",
+                description:"matheus",
+                isbn:"92183012"
             }
             const newBook = new Book(livro);
             await newBook.save();
@@ -33,6 +37,9 @@ class BookController{
             })
         }catch(e){
             console.log(e)
+            res.json({
+                message: "este livro já existe"
+            })
         }
     }
 
