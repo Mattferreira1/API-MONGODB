@@ -22,13 +22,7 @@ class BookController{
 
     async create(req, res){
         try{
-            const livro = {
-                author:"matheus",
-                name:"mathes",
-                title:"matheus",
-                description:"matheus",
-                isbn:"92183012"
-            }
+            const livro = req.body
             const newBook = new Book(livro);
             await newBook.save();
             console.log(".")
