@@ -19,3 +19,7 @@ app.get("/", (req, res)=>{
 app.get("/v1/books", bookController.list)
 
 app.post("/v1/books/create", bookController.create)
+
+app.delete("/v1/books/delete/:id", bookController.delete)
+
+app.put("/v1/books/update/:id", bookController.update)
