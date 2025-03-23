@@ -7,10 +7,9 @@ app.use(express.json())
 require("./Models/BookModel")
 const BookController = require("./Controllers/BookController")
 const bookController = new BookController()
+const PORT = process.env.PORT || 3000;
 
-app.listen(3030, "127.0.0.1", ()=>{
-    console.log("server is running on http://127.0.0.1:3030")
-})
+app.listen(PORT, "0.0.0.0", () => console.log(`Servidor rodando na porta ${PORT}`));
 
 
 require("./Database/connection")
