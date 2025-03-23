@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const bookSchema = new mongoose.Schema({
-  title: { type: String, required: true }, // Título do livro
-  author: { type: String, required: true }, // Autor
-  genre: { type: String }, // Gênero
+  title: { type: String, required: true },
+  author: { type: String, required: true },
+  genre: { type: String },
   url:{type: String}
 });
 
